@@ -1,0 +1,61 @@
+baseURL = 'https://heybook.ru/'
+locale = 'ru-ru'
+title = 'heybook.ru'
+theme = 'PaperMod'
+
+[permalinks]
+posts = '/:year/:month/:day/:slug/'
+
+[pagination]
+pagerSize = 10
+
+[params]
+defaultTheme = 'auto'
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+
+[params.homeInfoParams]
+Title = 'heybook.ru'
+Content = 'Рецензии на книги и не только'
+
+# [[params.socialIcons]]
+# name = 'github'
+# title = 'GitHub'
+# url = 'https://github.com/gmelikov'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = 'dracula'
+lineNos = false
+noClasses = false
+
+[outputs]
+home = ['HTML', 'RSS']
+
+[menu]
+[[menu.main]]
+identifier = 'posts'
+name = 'Записи'
+url = '/posts/'
+weight = 10
+[[menu.main]]
+identifier = 'categories'
+name = 'Категории'
+url = '/categories/'
+weight = 20
+[[menu.main]]
+identifier = 'tags'
+name = 'Теги'
+url = '/tags/'
+weight = 30
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
